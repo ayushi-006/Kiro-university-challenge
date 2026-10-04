@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Spec Alignment Check on Session Start",
+      "trigger": "SessionStart",
+      "action": {
+        "type": "agent",
+        "prompt": "At the start of this session, review the spec at .kiro/specs/task-manager.md and remind me of any open requirements not yet implemented. Keep it brief — one bullet per gap found, or confirm \"All spec requirements implemented\" if everything is covered."
+      }
+    }
+  ]
+}

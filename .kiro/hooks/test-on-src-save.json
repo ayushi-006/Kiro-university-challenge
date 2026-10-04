@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Run Tests on Backend Save",
+      "trigger": "PostFileSave",
+      "description": "Runs the full test suite (unit tests + PBT) after any source TypeScript file is saved under src/",
+      "matcher": "backend/src/.*\\.ts$",
+      "action": {
+        "type": "command",
+        "command": "cd /Users/ayushidixit/Documents/kiro_challenge/kiro-task-manager/backend && npm run test:run 2>&1 | tail -20",
+        "timeout": 60
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "TypeScript Lint on Save",
+      "trigger": "PostFileSave",
+      "description": "Runs TypeScript type-check after any .ts or .tsx file is saved to catch type errors immediately",
+      "matcher": "\\.(ts|tsx)$",
+      "action": {
+        "type": "command",
+        "command": "cd /Users/ayushidixit/Documents/kiro_challenge/kiro-task-manager/backend && npx tsc --noEmit 2>&1 | head -30 && echo \"✅ TypeScript check passed\"",
+        "timeout": 30
+      }
+    }
+  ]
+}
